@@ -1,0 +1,51 @@
+
+---
+ #Testing Profile
+spring: 
+  profiles: test
+  h2:
+    console:
+      path: /h2-test
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    name: testdb    
+    url: jdbc:h2:mem:zenjob;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  
+
+    
+---
+#Production profile
+server:
+  port: 8080 
+spring:
+  profiles: prod
+  jpa:
+    database: postgresql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+#    show-sql: true
+    # to avoid : java.sql.SQLFeatureNotSupportedException: 
+    # Method org.postgresql.jdbc.PgConnection.createClob() is not yet implemented.
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+          lob:
+            non_contextual_creation: true
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    
+    
+ 
