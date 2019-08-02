@@ -1,0 +1,33 @@
+-- insert sample Reactor
+insert into reactor 	(id, name) values (1, 'James Bond');
+insert into reactor 	(id, name) values (2, 'Nesrin Bakr');	
+insert into reactor 	(id, name) values (3, 'Kaya Mero');	
+insert into reactor 	(id, name) values (4, 'Seto Marwan');	
+insert into reactor 	(id, name) values (5, 'Daniel Wan');	
+
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 6, 1, 1);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 7, 2, 1);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 8, 3, 1);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 9, 4, 2);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 10, 5, 2);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 11, 6, 3);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 12, 7, 3);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (0, 13, 8, 1);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (0, 14, 9, 2);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (0, 15, 10, 2);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (0, 16, 11, 2);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (0, 17, 12, 2);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (0, 18, 13, 4);
+--INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (0, 19, 14, 5);
+--INSERT INTO recommendation_criteria VALUES (1, 0, 1, 1);
+--INSERT INTO recommendation_criteria VALUES (2, 1, 1, 1);
+--INSERT INTO recommendation_criteria VALUES (3, 0, 2, 1);
+--INSERT INTO recommendation_criteria VALUES (5, 0, 3, 1);
+--INSERT INTO recommendation_criteria VALUES (6, 1, 3, 1);
+--INSERT INTO recommendation_criteria VALUES (7, 0, 4, 2);
+--INSERT INTO recommendation_criteria VALUES (9, 0, 5, 2);
+--INSERT INTO recommendation_criteria VALUES (10, 1, 5, 2);
+--INSERT INTO recommendation_criteria VALUES (11, 0, 6, 3);
+--INSERT INTO recommendation_criteria VALUES (12, 1, 6, 3);
+--INSERT INTO recommendation_criteria VALUES (13, 0, 7, 3);
+--INSERT INTO recommendation_criteria VALUES (14, 1, 7, 3);
