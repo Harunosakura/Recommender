@@ -38,9 +38,9 @@ import com.ni.recommend.repository.ReactorRepository;
 import com.ni.recommend.repository.RecommendationCriteriaRpository;
 import com.ni.recommend.utils.CriteriaType;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-//@AutoConfigureMockMvc
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@AutoConfigureMockMvc
 
 public class RecommendationServiceTest {
 
@@ -92,7 +92,7 @@ public class RecommendationServiceTest {
 
 	}
 
-//	@Test
+	@Test
 	public void testRetrieveRecommendedBooks_ReactorNotExist_throwsRecordNotFoundException() {
 
 		when(reactorRepMock.findById(any())).thenThrow(new RecordNotFoundException("No User Found With ID", 1));
@@ -103,7 +103,7 @@ public class RecommendationServiceTest {
 		verify(reactorRepMock, times(1)).findById(1l);
 	}
 
-//	@Test
+	@Test
 	public void testRetrieveRecommendedBooks_ReactorExistCriteriaEmpty_returnBooksList() {
 		Page<Book> foundbooks = new PageImpl<Book>(books);
 

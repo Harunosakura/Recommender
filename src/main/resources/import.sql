@@ -1,9 +1,9 @@
 -- insert sample Reactor
-insert into reactor 	(id, name) values (1, 'James Bond');
-insert into reactor 	(id, name) values (2, 'Nesrin Bakr');	
-insert into reactor 	(id, name) values (3, 'Kaya Mero');	
-insert into reactor 	(id, name) values (4, 'Seto Marwan');	
-insert into reactor 	(id, name) values (5, 'Daniel Wan');	
+--insert into reactor 	(id, name) values (1, 'James Bond');
+--insert into reactor 	(id, name) values (2, 'Nesrin Bakr');	
+--insert into reactor 	(id, name) values (3, 'Kaya Mero');	
+--insert into reactor 	(id, name) values (4, 'Seto Marwan');	
+--insert into reactor 	(id, name) values (5, 'Daniel Wan');	
 
 --INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 6, 1, 1);
 --INSERT INTO user_reaction (reaction_type, id, book_id, reactor_id) VALUES (1, 7, 2, 1);

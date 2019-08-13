@@ -20,7 +20,7 @@ public class Reactor {
 
 	@Id
 	@GeneratedValue(generator = "SEQ_REACTOR")
-	@SequenceGenerator(sequenceName = "SEQ_REACTOR", name = "SEQ_REACTOR", initialValue = 6, allocationSize = 1)
+	@SequenceGenerator(sequenceName = "SEQ_REACTOR", name = "SEQ_REACTOR", initialValue = 1, allocationSize = 1)
 	private Long id;
 
 	@NotBlank
@@ -33,5 +33,10 @@ public class Reactor {
 	@OneToMany(mappedBy = "reactor")
 	@ToString.Exclude
 	private List<RecommendationCriteria> criteria;
+	
+	public Reactor(Long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
 }

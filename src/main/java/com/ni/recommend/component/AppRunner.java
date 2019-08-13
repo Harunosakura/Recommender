@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.ni.recommend.domain.Reactor;
 import com.ni.recommend.repository.BookRepository;
 import com.ni.recommend.repository.ReactorRepository;
 import com.ni.recommend.service.UserReactionService;
@@ -27,6 +28,20 @@ public class AppRunner implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		log.info("\n=====================Start adding Some test data ============");
 		// user 1 likes
+		log.info("==================================================");
+		
+		reactorRep.save(new Reactor(1l, "James Bond"));
+		reactorRep.save(new Reactor(2l, "Nesrin Bakr"));
+		reactorRep.save(new Reactor(3l, "Kaya Mero"));
+		reactorRep.save(new Reactor(4l, "Seto Marwan"));
+		reactorRep.save(new Reactor(5l, "Daniel Wan"));
+
+		log.info("Reactors {}", reactorRep.findAll());
+		log.info("Books {}", bookRep.findAll());
+		
+		if(reactorRep.findAll().isEmpty())
+			return;
+		
 		reactionService.likeBook(reactorRep.findById(1l).get(), bookRep.findById(1l).get());
 		reactionService.likeBook(reactorRep.findById(1l).get(), bookRep.findById(2l).get());
 		reactionService.likeBook(reactorRep.findById(1l).get(), bookRep.findById(3l).get());
