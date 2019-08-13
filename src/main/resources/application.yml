@@ -1,4 +1,3 @@
-
 ---
  #Testing Profile
 spring: 
@@ -16,22 +15,20 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
-  
-
     
 ---
 #Production profile
 server:
-  port: 8080 
+  port: 9090
 spring:
   profiles: prod
   jpa:
     database: postgresql
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
 #    show-sql: true
     # to avoid : java.sql.SQLFeatureNotSupportedException: 
     # Method org.postgresql.jdbc.PgConnection.createClob() is not yet implemented.
@@ -47,5 +44,3 @@ spring:
     url: jdbc:postgresql://localhost:5432/postgres
     driver-class-name: org.postgresql.Driver
     
-    
- 
